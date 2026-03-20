@@ -133,11 +133,29 @@ Serialization → Packet Train → ACK Clock → Queue → Throughput
 
 ## 📊 Expected Results
 
-| Link Speed | Frame Size | Δt (Theory) | Δt (Observed) |
-|------------|------------|------------|---------------|
-| 10 Mbps    | 1518 B     | ~1.2 ms    | ✔ Match       |
-| 100 Mbps   | 1518 B     | ~0.12 ms   | ✔ Match       |
-| 1 Gbps     | 1518 B     | ~0.012 ms  | ✔ Match       |
+| Link Speed | Frame Size | On-Wire Size | Δt (Theory) | Δt (Observed) |
+|------------|------------|--------------|-------------|----------------|
+| 10 Mbps    | 1518 B     | 1538 B       | ~1.23 ms    | ✔ Match        |
+| 100 Mbps   | 1518 B     | 1538 B       | ~0.123 ms   | ✔ Match        |
+| 1 Gbps     | 1518 B     | 1538 B       | ~0.0123 ms  | ✔ Match        |
+
+**Note:**
+
+- Frame Size (1518 B) refers to the Ethernet frame only  
+  *(excluding preamble, SFD, and IFG)*
+
+- On-Wire Size (1538 B) includes the full transmission footprint per frame:
+Preamble (7B) + SFD (1B) + Frame (1518B) + IFG (12B) = 1538B
+
+- Δt (Theory) is calculated based on **on-wire transmission time**, not just frame size:
+
+Δt = (On-Wire Size × 8) / Link Speed
+
+
+- Therefore, although L is defined as frame size (1518 B),  
+**the measured Δt naturally includes preamble, SFD, and IFG**,  
+since they consume real wire-time.
+
 
 ---
 
@@ -148,21 +166,21 @@ Serialization → Packet Train → ACK Clock → Queue → Throughput
 
 ### 10 Mbps
 
-- Δt ≈ 1.2 ms  
+- Δt ≈ 1.23 ms  
 - Very stable spacing  
 
 ---
 
 ### 100 Mbps
 
-- Δt ≈ 0.12 ms  
+- Δt ≈ 0.123 ms  
 - 10× compression  
 
 ---
 
 ### 1 Gbps
 
-- Δt ≈ 0.012 ms  
+- Δt ≈ 0.012 ms to 0.013ms  
 - Approaching timestamp precision limit  
 
 ---
