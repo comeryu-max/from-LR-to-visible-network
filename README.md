@@ -158,13 +158,13 @@ Time delta from previous frame
 
 ---
 
-### 6️⃣ Validate
+## 6️⃣ Validate
 
 Check:
 
-- Does Δt scale with 1/R?
-- Are frames continuous?
-- Are there gaps?
+- Does inter-frame spacing (Δt) match the expected serialization delay (L/R)?
+- Are frames continuous (full utilization)?
+- Do gaps appear (throughput collapse)?
 
 ---
 
