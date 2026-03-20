@@ -1,6 +1,6 @@
 # 🚀 From L/R to Visible Network
 
-> **You are not measuring packets.**
+> **You are not measuring packets.**  
 > **You are watching time.**  
 > **Engineers learn L/R.**  
 > **Networks reveal Δt.**  
@@ -12,10 +12,10 @@ excluding preamble, SFD, and IFG.
 However, preamble/SFD and IFG still consume real wire-time, and are therefore reflected
 in the measured inter-frame interval Δt.
 
-For this reason, throughput may be expressed under different conventions:
-(1) frame throughput, counting only the frame itself;
-(2) on-wire throughput, including preamble/SFD;
-and (3) full slot occupancy, including IFG as well.
+For this reason, throughput may be expressed under different conventions:  
+(1) frame throughput, counting only the frame itself;  
+(2) on-wire throughput, including preamble/SFD;  
+and (3) full slot occupancy, including IFG as well.  
 
 All three are valid as long as the definition is stated explicitly.
 
@@ -42,10 +42,10 @@ but the inter-frame arrival time Δt.
 
 This measured Δt includes:
 
-• Frame transmission time (L/R)
-• Preamble and SFD (on-wire bits)
-• IFG (mandatory spacing)
-• Additional idle time (queueing, TCP gaps, etc.)
+• Frame transmission time (L/R)  
+• Preamble and SFD (on-wire bits)  
+• IFG (mandatory spacing)  
+• Additional idle time (queueing, TCP gaps, etc.)  
 
 ---
 
