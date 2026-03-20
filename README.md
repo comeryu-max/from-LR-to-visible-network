@@ -228,4 +228,10 @@ MIT
 25+ years in Network Performance Monitoring  
 Finally decided to *look at L/R seriously*
 
+## 📸 Image Attribution
+
+- Serialization vs Throughput diagram: generated for this project
+- Lab topology diagram: original work by the author
+- Packet analysis screenshots: obtained using Wireshark (open-source tool)
+
 
