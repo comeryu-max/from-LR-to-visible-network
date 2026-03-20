@@ -97,7 +97,7 @@ Serialization → Packet Train → ACK Clock → Queue → Throughput
 
 ---
 
-## 📸 Packet Evidence (Replace with your captures)
+## 📸 Packet Evidence
 
 ![Lab Topology](./Delta-time.jpg)
 
@@ -136,7 +136,7 @@ Serialization → Packet Train → ACK Clock → Queue → Throughput
 
 ### 2️⃣ Generate Traffic
 
-curl -O http://server/testfile.bin
+curl -O http://192.168.2.51/25Mbytes.doc
  
 
 ---
