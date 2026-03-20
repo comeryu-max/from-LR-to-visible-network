@@ -52,10 +52,8 @@ Even on a perfect **10 Mbps link**, you may observe:
 ---
 
 ## 🧪 Lab Topology
----
-![Lab Topology](https://github.com/user-attachments/assets/506ed8b3-fec3-4e52-a53e-e8ac05bc20eb)
 
-
+![Lab Topology](./Lab Topology.jpg)
 
 
 ---
