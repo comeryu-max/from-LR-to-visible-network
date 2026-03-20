@@ -96,7 +96,7 @@ Serialization → Packet Train → ACK Clock → Queue → Throughput
 
 ## 📸 Packet Evidence (Replace with your captures)
 
-![Lab Topology](./Lab-Topology.jpg)
+![Lab Topology](./Delta-time.jpg)
 
 
 ### 10 Mbps
