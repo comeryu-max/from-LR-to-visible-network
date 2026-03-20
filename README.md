@@ -148,6 +148,11 @@ tcp.stream eq X
 
 Look at:
 
+![Lab Topology](./Delta-time.jpg)
+
+
+---
+
 Time delta from previous frame
  
 
