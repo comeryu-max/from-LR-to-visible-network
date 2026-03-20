@@ -3,7 +3,7 @@
 > You are not measuring packets.  
 > **You are watching time.**
 
-<img width="1536" height="1024" alt="serialization-vs-throughput" src="https://github.com/user-attachments/assets/b700a8bc-f4d9-4c1b-b801-dc1ae8e4af7e" />
+![Lab Topology](./Serialization-vs-Throughput.png)
 
 
 ---
