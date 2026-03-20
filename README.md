@@ -64,8 +64,6 @@ Even on a perfect **10 Mbps link**, you may observe:
 
 Frame1 Frame2 Frame3 Frame4
 |-----| |-----| |-----| |-----|
-L/R L/R L/R L/R
-
 
 👉 Continuous → Full throughput  
 👉 Gaps → Throughput drop  
