@@ -1,27 +1,71 @@
 # 🚀 From L/R to Visible Network
 
-> You are not measuring packets.  
-> **You are watching time.**
+> **You are not measuring packets.**
+> **You are watching time.**  
+> **Engineers learn L/R.**  
+> **Networks reveal Δt.**  
 
 ![Lab Topology](./Serialization-vs-Throughput.png)
+In this figure, L denotes the Ethernet frame size only (1518 bytes in the example),
+excluding preamble, SFD, and IFG.
 
+However, preamble/SFD and IFG still consume real wire-time, and are therefore reflected
+in the measured inter-frame interval Δt.
+
+For this reason, throughput may be expressed under different conventions:
+(1) frame throughput, counting only the frame itself;
+(2) on-wire throughput, including preamble/SFD;
+and (3) full slot occupancy, including IFG as well.
+
+All three are valid as long as the definition is stated explicitly.
 
 ---
 
 ## 🧠 What This Project Is
 
 Most engineers know:
-Serialization Delay = L / R
 
-But very few have actually **seen it**.
+    Serialization Delay = L / R
+
+Where:
+L denotes the Ethernet frame size in bits 
+(excluding preamble, SFD, and IFG),
+and R is the link transmission rate.
+
+For Ethernet, the minimum inter-frame spacing (IFG)
+is fixed at 96 bit-times and is not included in L.
+
+---
+
+However, in real networks, what we can observe is not L/R directly,
+but the inter-frame arrival time Δt.
+
+This measured Δt includes:
+
+• Frame transmission time (L/R)
+• Preamble and SFD (on-wire bits)
+• IFG (mandatory spacing)
+• Additional idle time (queueing, TCP gaps, etc.)
+
+---
+
+Therefore:
+
+    Throughput = L / Δt
+
+And in general:
+
+    Δt ≥ L / R
+
+---
 
 This project bridges the gap:
 
-**From:**
-- A textbook formula (L/R)
+From:
+    A textbook formula (L/R)
 
-**To:**
-- A visible, measurable network behavior
+To:
+    A visible, measurable network behavior (Δt)
 
 ---
 
