@@ -72,8 +72,11 @@ Frame1 Frame2 Frame3 Frame4
 
 ### 📸 Packet Train (Observed Reality)
 
-![Lab Topology](./Lab-Topology.jpg)
+![Lab Topology](./packet-train.jpg)
 
+Each spacing (Δt ≈ 1.23 ms) represents one full frame transmission on the wire.
+
+Throughput is therefore the inverse of this spacing.
 
 ---
 
