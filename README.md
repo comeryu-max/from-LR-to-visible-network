@@ -5,7 +5,7 @@
 > **Engineers learn L/R.**  
 > **Networks reveal Δt.**  
 
-![Lab Topology](./Serialization-vs-Throughput.png)
+![Lab Topology](./Serialization-vs-Throughput_v2.png)
 In this figure, L denotes the Ethernet frame size only (1518 bytes in the example),
 excluding preamble, SFD, and IFG.
 
