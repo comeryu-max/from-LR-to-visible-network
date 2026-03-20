@@ -60,13 +60,20 @@ Even on a perfect **10 Mbps link**, you may observe:
 
 ## ⏱️ What You Are Actually Observing
 
-### Packet Train
+### Packet Train(Concept)
 
 Frame1 Frame2 Frame3 Frame4
 |-----| |-----| |-----| |-----|
 
 👉 Continuous → Full throughput  
 👉 Gaps → Throughput drop  
+
+---
+
+### 📸 Packet Train (Observed Reality)
+
+![Lab Topology](./Lab-Topology.jpg)
+
 
 ---
 
@@ -88,6 +95,9 @@ Serialization → Packet Train → ACK Clock → Queue → Throughput
 ---
 
 ## 📸 Packet Evidence (Replace with your captures)
+
+![Lab Topology](./Lab-Topology.jpg)
+
 
 ### 10 Mbps
 
