@@ -53,7 +53,7 @@ Even on a perfect **10 Mbps link**, you may observe:
 
 ## 🧪 Lab Topology
 
-![Lab Topology](./Lab Topology.jpg)
+![Lab Topology](./Lab-Topology.jpg)
 
 
 ---
@@ -125,10 +125,102 @@ Serialization → Packet Train → ACK Clock → Queue → Throughput
 
 ### 2️⃣ Generate Traffic
 
+curl -O http://server/testfile.bin
+ 
+
+---
+
+### 3️⃣ Capture
+
+- Use NPM Device / Protocol Analyzer
+- Capture on TAP monitor port
+
+---
+
+### 4️⃣ Filter
+
+tcp.stream eq X
 
 
 ---
 
-## ⏱️ What You Are Actually Observing
+### 5️⃣ Measure
 
-### Packet Train
+Look at:
+
+Time delta from previous frame
+ 
+
+---
+
+### 6️⃣ Validate
+
+Check:
+
+- Does Δt scale with 1/R?
+- Are frames continuous?
+- Are there gaps?
+
+---
+
+## ⚠️ Measurement Validity
+
+> TAP aggregation does NOT affect serialization measurement.
+
+Because:
+
+- Serialization happens **before TAP**
+- TAP only mirrors traffic
+- Timing remains intact
+
+---
+
+## 🧭 What Changes After This Lab
+
+Before:
+- You see packets
+
+After:
+- You see timing
+- You see gaps
+- You see TCP rhythm
+- You see queue buildup
+
+---
+
+## 🧠 One-Line Summary
+
+> **Bandwidth tells you capacity.  
+> Timing tells you reality.**
+
+---
+
+## ⭐ Final Thought
+
+> Most engineers measure throughput.  
+> Few measure time.  
+> **Fewer understand that throughput is time.**
+
+---
+
+## 📦 Future Work
+
+- ACK Clock visualization  
+- CUBIC behavior  
+- BDP limits  
+- Queue dynamics  
+
+---
+
+## 📎 License
+
+MIT
+
+---
+
+## 🙌 Author
+
+25+ years in Network Performance Monitoring  
+Finally decided to *look at L/R seriously*
+
+
