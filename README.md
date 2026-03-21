@@ -133,11 +133,36 @@ Serialization → Packet Train → ACK Clock → Queue → Throughput
 
 ## 📊 Expected Results
 
-| Link Speed | Frame Size | On-Wire Size | Δt (Theory) | Δt (Observed) |
-|------------|------------|--------------|-------------|----------------|
-| 10 Mbps    | 1518 B     | 1538 B       | ~1.23 ms    | ✔ Match        |
-| 100 Mbps   | 1518 B     | 1538 B       | ~0.123 ms   | ✔ Match        |
-| 1 Gbps     | 1518 B     | 1538 B       | ~0.0123 ms  | ✔ Match        |
+| Link Speed | Frame Size | On-Wire Size | L/R (Frame) | Δt (Wire-Time) | Observed Δt |
+|------------|------------|--------------|-------------|----------------|-------------|
+| 10 Mbps    | 1518 B     | 1538 B       | 1.214 ms    | **1.230 ms**   | Consistent  |
+| 100 Mbps   | 1518 B     | 1538 B       | 0.121 ms    | **0.123 ms**   | Consistent  |
+
+### Note on 1 Gbps
+
+At 1 Gbps, the theoretical wire-time interval for a 1518-byte Ethernet frame is:
+
+- **L/R (frame only)** = 12.144 µs
+- **Δt (wire-time, 1538B)** = 12.304 µs
+
+However, in this experiment, the analyzer display/export resolution at 1 Gbps is effectively at the microsecond level for single-frame observation. For example:
+
+PACKET: #137 arrived at 05:32:09.827.202.000(UTC)  
+PACKET: #138 arrived at 05:32:09.827.214.000(UTC)  
+
+This corresponds to an observed interval of:
+
+Δt (observed) = 12.000 µs = 0.012 ms
+
+Therefore, the 1 Gbps result is consistent in scale with theory, but the displayed single-frame interval is not fine enough to reliably distinguish 12.144 µs from 12.304 µs.
+
+In other words:
+
+the theory still holds,
+
+but the measurement has reached the practical display/quantization limit of the analyzer for single-frame Δt observation at 1 Gbps.
+
+A more accurate validation at 1 Gbps can be achieved by averaging Δt across a continuous packet train rather than relying on a single displayed inter-frame interval.
 
 **Note:**
 
