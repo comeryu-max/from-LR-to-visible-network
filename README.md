@@ -1,3 +1,13 @@
+## 🚀 About This Project
+
+This is not just a repository.
+
+It is a reproducible lab series that turns:
+
+> L / R → Δt → Throughput → Reality
+
+---
+
 # 🚀 From L/R to Visible Network
 
 > **You are not measuring packets.**  
