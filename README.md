@@ -315,6 +315,18 @@ After:
 
 ---
 
+## 💬 Discussions & Questions
+
+Feel free to open an Issue or start a Discussion if you have:
+
+- Questions about serialization delay (L/R)
+- Ideas for new experiments (ACK Clock, BDP)
+- Observations from your own packet captures
+
+Engineers are welcome.
+
+---
+
 ## 📎 License
 
 MIT
