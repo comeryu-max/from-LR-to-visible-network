@@ -120,7 +120,9 @@ Even on a perfect **10 Mbps link**, you may observe:
 ### Packet Train(Concept)
 
 Frame1 Frame2 Frame3 Frame4
-|-----| |-----| |-----| |-----|
+|-----| |-----| |-----| |-----|  
+
+🚃—gap—🚃—gap—🚃—gap—🚃  
 
 👉 Continuous → Full throughput  
 👉 Gaps → Throughput drop  
