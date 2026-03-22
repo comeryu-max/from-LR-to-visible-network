@@ -6,6 +6,9 @@ It is a reproducible lab series that turns:
 
 > L / R → Δt → Throughput → Reality
 
+The goal of this experiment is not to evaluate tools,  
+but to understand what can be reliably measured.  
+
 ---
 
 # 🚀 From L/R to Visible Network
